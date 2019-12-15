@@ -3,11 +3,13 @@ App for learning GraphQL with React and Apollo
 
 ### To run locally
 
-```yarn```
+```yarn && cd client && yarn```
 
-```yarn server```
+```cd ..```
 
-then go to `localhost:5000/graphql` and play with GraphQL playground
+```yarn dev```
+
+GraphQL - `localhost:5000/graphql`
 
 ### Live playground
 
