@@ -1,3 +1,5 @@
+_Following the course [GraphQL With React & Apollo](https://www.youtube.com/playlist?list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx)_
+
 # spacex-launch-stats
 App for learning GraphQL with React and Apollo
 
@@ -8,6 +10,8 @@ App for learning GraphQL with React and Apollo
 ```yarn dev```
 
 GraphQL - `localhost:5000/graphql`
+
+Client - `localhost:3000`
 
 ### Live playground
 
