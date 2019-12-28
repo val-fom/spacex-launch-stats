@@ -5,7 +5,9 @@ App for learning GraphQL with React and Apollo
 
 ### To run locally
 
-```yarn```
+```yarn && cd client && yarn```
+
+```cd ..```
 
 ```yarn dev```
 

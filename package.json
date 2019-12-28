@@ -24,9 +24,5 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
     "nodemon": "^2.0.2"
-  },
-  "private": true,
-  "workspaces": [
-    "client"
-  ]
+  }
 }
