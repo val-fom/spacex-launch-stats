@@ -1,6 +1,7 @@
 import React from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Launches } from './components/Launches';
 import './App.css';
 
@@ -9,14 +10,20 @@ const client = new ApolloClient({
 });
 
 const App: React.FC = () => (
-  <ApolloProvider client={client}>
-    <div className="App">
-      <header className="App-header">SpaceX</header>
-      <div className="App-content">
-        <Launches />
+  <Router>
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Link to="/">
+          <header className="App-header">SpaceX</header>
+        </Link>
+        <div className="App-content">
+          <Switch>
+            <Route path="/" component={Launches} />
+          </Switch>
+        </div>
       </div>
-    </div>
-  </ApolloProvider>
+    </ApolloProvider>
+  </Router>
 );
 
 export default App;
