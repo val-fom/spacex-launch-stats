@@ -3,6 +3,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Launches } from './components/Launches';
+import { Launch } from './components/Launch';
 import './App.css';
 
 const client = new ApolloClient({
@@ -18,7 +19,8 @@ const App: React.FC = () => (
         </Link>
         <div className="App-content">
           <Switch>
-            <Route path="/" component={Launches} />
+            <Route exact path="/" component={Launches} />
+            <Route exact path="/launch/:flight_number" component={Launch} />
           </Switch>
         </div>
       </div>
