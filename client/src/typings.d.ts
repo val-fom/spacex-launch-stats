@@ -1,8 +1,4 @@
 /* eslint-disable camelcase */
-interface Launches {
-  launches: Launch[];
-}
-
 interface Launch {
   flight_number: number;
   mission_name: string;
