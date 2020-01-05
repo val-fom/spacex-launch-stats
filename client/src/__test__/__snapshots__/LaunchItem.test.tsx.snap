@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App-launch"
+  >
+    <a
+      href="/launch/1"
+    >
+      <div>
+        flight_number
+      </div>
+      <div>
+        1
+      </div>
+    </a>
+    <div>
+      launch_date_local
+    </div>
+    <div>
+      2006-03-25T10:30:00+12:00
+    </div>
+    <div>
+      mission_name
+    </div>
+    <div>
+      FalconSat
+    </div>
+    <div>
+      rocket_name
+    </div>
+    <div>
+      Falcon 1
+    </div>
+  </div>
+</DocumentFragment>
+`;
