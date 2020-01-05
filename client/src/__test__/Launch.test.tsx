@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
+import { wait } from '@testing-library/react';
+import { Route } from 'react-router-dom';
 import { Launch, LAUNCH } from '../components/Launch';
 import { renderWithRouter } from './testUtils';
 
@@ -31,12 +33,27 @@ const mocks = [
   },
 ];
 
-test('renders without crashes', () => {
-  const { asFragment } = renderWithRouter(
+test('should render loading state initially', () => {
+  const { getByTestId } = renderWithRouter(
     <MockedProvider mocks={mocks} addTypename={false}>
       <Launch />
     </MockedProvider>,
-    { route: '/1' }
+    { route: '/launch/1' }
   );
-  expect(asFragment()).toMatchSnapshot();
+  const loadingElement = getByTestId('loading');
+  expect(loadingElement).toBeInTheDocument();
+});
+
+test('should render launch details', async () => {
+  const { getByTestId } = renderWithRouter(
+    <MockedProvider mocks={mocks} addTypename={false}>
+      <Route exact path="/launch/:flight_number" component={Launch} />
+    </MockedProvider>,
+    { route: '/launch/1' }
+  );
+
+  await wait();
+
+  const dataElement = getByTestId('data');
+  expect(dataElement).toBeInTheDocument();
 });
