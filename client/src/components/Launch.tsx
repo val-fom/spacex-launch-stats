@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { useParams } from 'react-router-dom';
 
-const LAUNCH = gql`
+export const LAUNCH = gql`
   query Launch($flight_number: Int!) {
     launch(flight_number: $flight_number) {
       flight_number
