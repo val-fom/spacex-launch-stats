@@ -3,7 +3,7 @@ import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
 import { wait } from '@testing-library/react';
 import { Route } from 'react-router-dom';
-import { Launch, LAUNCH } from '../components/Launch';
+import { Launch, LAUNCH } from 'components/Launch';
 import { renderWithRouter } from './testUtils';
 
 const mocks = [

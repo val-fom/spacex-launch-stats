@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { LaunchItem } from '../components/LaunchItem';
+import { LaunchItem } from 'components/LaunchItem';
 
 const mockLaunch = {
   flight_number: 1,
