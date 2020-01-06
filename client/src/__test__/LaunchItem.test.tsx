@@ -17,7 +17,7 @@ const mockLaunch = {
   },
 };
 
-test('matches snapshot', () => {
+it('matches snapshot', () => {
   const { asFragment } = render(
     <Router>
       <LaunchItem launch={mockLaunch} />

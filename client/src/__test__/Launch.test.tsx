@@ -36,7 +36,7 @@ const mocks = [
 // FIXME: Warning: An update to Launch inside a test was not wrapped in act(...)
 // TODO: use regular render and add Route tests with renderWithRouter
 
-test('should render loading state initially', () => {
+it('should render loading state initially', () => {
   const { getByTestId } = renderWithRouter(
     <MockedProvider mocks={mocks} addTypename={false}>
       <Launch />
@@ -47,7 +47,7 @@ test('should render loading state initially', () => {
   expect(loadingElement).toBeInTheDocument();
 });
 
-test('should render launch details', async () => {
+it('should render launch details', async () => {
   const { getByTestId } = renderWithRouter(
     <MockedProvider mocks={mocks} addTypename={false}>
       <Route exact path="/launch/:flight_number" component={Launch} />
