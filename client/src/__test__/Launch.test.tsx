@@ -37,7 +37,7 @@ it('Launch should render loading state initially', () => {
       <Launch flightNumber="1" />
     </MockedProvider>
   );
-  const loadingElement = getByTestId('loading');
+  const loadingElement = getByTestId('launch-loading');
   expect(loadingElement).toBeInTheDocument();
 });
 
@@ -50,6 +50,6 @@ it('Launch should render launch details', async () => {
 
   await wait();
 
-  const dataElement = getByTestId('data');
+  const dataElement = getByTestId('launch-data');
   expect(dataElement).toBeInTheDocument();
 });

@@ -19,7 +19,7 @@ exports[`App matches snapshot in \`Loading\` state 1`] = `
       class="content"
     >
       <p
-        data-testid="loading"
+        data-testid="launches-loading"
       >
         Loading...
       </p>

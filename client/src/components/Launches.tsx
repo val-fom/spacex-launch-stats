@@ -26,12 +26,12 @@ export const Launches: React.FC<{}> = () => {
     GET_LAUNCHES
   );
 
-  if (loading) return <p data-testid="loading">Loading...</p>;
+  if (loading) return <p data-testid="launches-loading">Loading...</p>;
 
   if (error) return <p>Error</p>;
 
   return (
-    <div data-testid="data">
+    <div data-testid="launches-data">
       {data?.launches.map(launch => (
         <LaunchItem
           key={`${launch.flight_number}${launch.mission_name}`}
