@@ -33,6 +33,8 @@ const mocks = [
   },
 ];
 
+// FIXME: Warning: An update to Launch inside a test was not wrapped in act(...)
+
 test('should render loading state initially', () => {
   const { getByTestId } = renderWithRouter(
     <MockedProvider mocks={mocks} addTypename={false}>
