@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Launch } from 'components/Launch';
-import { Launches } from 'components/Launches';
+import { LaunchRoute } from 'routes/LaunchRoute';
+import { HomeRoute } from 'routes/HomeRoute';
 import { Header } from 'components/Header';
 import './CoreLayout.css';
 
@@ -10,8 +10,8 @@ export const CoreLayout: React.FC<{}> = () => (
     <Header />
     <div className="CoreLayout-content">
       <Switch>
-        <Route exact path="/" component={Launches} />
-        <Route exact path="/launch/:flight_number" component={Launch} />
+        <Route exact path="/" component={HomeRoute} />
+        <Route exact path="/launch/:flight_number" component={LaunchRoute} />
       </Switch>
     </div>
   </div>

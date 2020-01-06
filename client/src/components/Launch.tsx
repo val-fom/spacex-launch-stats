@@ -3,7 +3,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import { useParams } from 'react-router-dom';
 
 export const LAUNCH = gql`
   query Launch($flight_number: Int!) {
@@ -22,8 +21,9 @@ export const LAUNCH = gql`
   }
 `;
 
-export const Launch: React.FC<{}> = () => {
-  const { flight_number: flightNumber } = useParams();
+export const Launch: React.FC<{ flightNumber?: string }> = ({
+  flightNumber,
+}) => {
   const { loading, error, data } = useQuery<{ launch: Launch }>(LAUNCH, {
     variables: {
       flight_number: flightNumber ? parseInt(flightNumber) : undefined,
