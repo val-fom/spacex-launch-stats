@@ -3,10 +3,10 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="CoreLayout"
+    class="container"
   >
     <header
-      class="Header"
+      class="header"
       data-testid="header"
     >
       <a
@@ -16,7 +16,7 @@ exports[`matches snapshot 1`] = `
       </a>
     </header>
     <div
-      class="CoreLayout-content"
+      class="content"
     >
       <p>
         Loading...

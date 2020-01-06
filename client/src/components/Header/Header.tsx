@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import styles from './Header.module.css';
 
 export const Header: React.FC<{}> = () => (
-  <header className="Header" data-testid="header">
+  <header className={styles.header} data-testid="header">
     <Link to="/">SpaceX</Link>
   </header>
 );
