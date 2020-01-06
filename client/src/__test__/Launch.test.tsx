@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
-import { wait } from '@testing-library/react';
-import { Route } from 'react-router-dom';
+import { render, wait } from '@testing-library/react';
 import { Launch, GET_LAUNCH } from 'components/Launch';
-import { renderWithRouter } from './testUtils';
 
 const mocks = [
   {
@@ -33,26 +31,21 @@ const mocks = [
   },
 ];
 
-// FIXME: Warning: An update to Launch inside a test was not wrapped in act(...)
-// TODO: use regular render and add Route tests with renderWithRouter
-
 it('should render loading state initially', () => {
-  const { getByTestId } = renderWithRouter(
+  const { getByTestId } = render(
     <MockedProvider mocks={mocks} addTypename={false}>
-      <Launch />
-    </MockedProvider>,
-    { route: '/launch/1' }
+      <Launch flightNumber="1" />
+    </MockedProvider>
   );
   const loadingElement = getByTestId('loading');
   expect(loadingElement).toBeInTheDocument();
 });
 
 it('should render launch details', async () => {
-  const { getByTestId } = renderWithRouter(
+  const { getByTestId } = render(
     <MockedProvider mocks={mocks} addTypename={false}>
-      <Route exact path="/launch/:flight_number" component={Launch} />
-    </MockedProvider>,
-    { route: '/launch/1' }
+      <Launch flightNumber="1" />
+    </MockedProvider>
   );
 
   await wait();
