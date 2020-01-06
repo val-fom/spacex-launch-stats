@@ -31,7 +31,7 @@ const mocks = [
   },
 ];
 
-it('should render loading state initially', () => {
+it('Launch should render loading state initially', () => {
   const { getByTestId } = render(
     <MockedProvider mocks={mocks} addTypename={false}>
       <Launch flightNumber="1" />
@@ -41,7 +41,7 @@ it('should render loading state initially', () => {
   expect(loadingElement).toBeInTheDocument();
 });
 
-it('should render launch details', async () => {
+it('Launch should render launch details', async () => {
   const { getByTestId } = render(
     <MockedProvider mocks={mocks} addTypename={false}>
       <Launch flightNumber="1" />

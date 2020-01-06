@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`App matches snapshot in \`Loading\` state 1`] = `
 <DocumentFragment>
   <div
     class="container"
@@ -18,7 +18,9 @@ exports[`matches snapshot 1`] = `
     <div
       class="content"
     >
-      <p>
+      <p
+        data-testid="loading"
+      >
         Loading...
       </p>
     </div>
