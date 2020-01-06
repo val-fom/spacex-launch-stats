@@ -3,20 +3,20 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="CoreLayout"
   >
-    <a
-      href="/"
+    <header
+      class="Header"
+      data-testid="header"
     >
-      <header
-        class="App-header"
-        data-testid="header"
+      <a
+        href="/"
       >
         SpaceX
-      </header>
-    </a>
+      </a>
+    </header>
     <div
-      class="App-content"
+      class="CoreLayout-content"
     >
       <p>
         Loading...

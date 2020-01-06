@@ -3,13 +3,13 @@ import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
 import { wait } from '@testing-library/react';
 import { Route } from 'react-router-dom';
-import { Launch, LAUNCH } from '../components/Launch';
+import { Launch, GET_LAUNCH } from 'components/Launch';
 import { renderWithRouter } from './testUtils';
 
 const mocks = [
   {
     request: {
-      query: LAUNCH,
+      query: GET_LAUNCH,
       variables: {
         flight_number: 1,
       },
@@ -34,6 +34,7 @@ const mocks = [
 ];
 
 // FIXME: Warning: An update to Launch inside a test was not wrapped in act(...)
+// TODO: use regular render and add Route tests with renderWithRouter
 
 test('should render loading state initially', () => {
   const { getByTestId } = renderWithRouter(

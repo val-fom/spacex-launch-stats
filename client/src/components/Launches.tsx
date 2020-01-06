@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { LaunchItem } from './LaunchItem';
 
-const LAUNCHES = gql`
+const GET_LAUNCHES = gql`
   query Launches {
     launches {
       flight_number
@@ -22,7 +22,9 @@ const LAUNCHES = gql`
 `;
 
 export const Launches: React.FC<{}> = () => {
-  const { loading, error, data } = useQuery<{ launches: Launch[] }>(LAUNCHES);
+  const { loading, error, data } = useQuery<{ launches: Launch[] }>(
+    GET_LAUNCHES
+  );
 
   if (loading) return <p>Loading...</p>;
 

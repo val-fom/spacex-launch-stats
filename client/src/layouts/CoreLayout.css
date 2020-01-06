@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.CoreLayout {
+  text-align: center;
+}
+
+.CoreLayout-content {
+  font-size: 8px;
+}
+
+
