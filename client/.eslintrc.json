@@ -162,7 +162,8 @@
 					".jsx",
 					".ts",
 					".tsx"
-				]
+				],
+				"moduleDirectory": ["node_modules", "src/"]
 			}
 		}
 	},
