@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './LaunchItem.css';
 
 export const LaunchItem: React.FC<{ launch: Launch }> = ({ launch }) => (
   <div className="LaunchItem">
