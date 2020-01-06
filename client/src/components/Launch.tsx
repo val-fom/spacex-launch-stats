@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { useParams } from 'react-router-dom';
 
-const LAUNCH = gql`
+export const LAUNCH = gql`
   query Launch($flight_number: Int!) {
     launch(flight_number: $flight_number) {
       flight_number
@@ -30,9 +30,9 @@ export const Launch: React.FC<{}> = () => {
     },
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p data-testid="loading">Loading...</p>;
 
-  if (error) return <p>Error</p>;
+  if (error) return <p data-testid="error">Error</p>;
 
   if (!data?.launch) return <p>No data</p>;
 
@@ -46,7 +46,7 @@ export const Launch: React.FC<{}> = () => {
   } = data.launch;
 
   return (
-    <div>
+    <div data-testid="data">
       <div>flight_number: {flight_number}</div>
       <div>mission_name: {mission_name}</div>
       <div>launch_year: {launch_year}</div>

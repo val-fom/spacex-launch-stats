@@ -22,7 +22,7 @@ const LAUNCHES = gql`
 `;
 
 export const Launches: React.FC<{}> = () => {
-  const { loading, error, data } = useQuery<Launches>(LAUNCHES);
+  const { loading, error, data } = useQuery<{ launches: Launch[] }>(LAUNCHES);
 
   if (loading) return <p>Loading...</p>;
 

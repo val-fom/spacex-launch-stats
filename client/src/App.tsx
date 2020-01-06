@@ -15,7 +15,9 @@ const App: React.FC = () => (
     <ApolloProvider client={client}>
       <div className="App">
         <Link to="/">
-          <header className="App-header">SpaceX</header>
+          <header className="App-header" data-testid="header">
+            SpaceX
+          </header>
         </Link>
         <div className="App-content">
           <Switch>
