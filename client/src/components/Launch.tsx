@@ -30,9 +30,9 @@ export const Launch: React.FC<{ flightNumber?: string }> = ({
     },
   });
 
-  if (loading) return <p data-testid="loading">Loading...</p>;
+  if (loading) return <p data-testid="launch-loading">Loading...</p>;
 
-  if (error) return <p data-testid="error">Error</p>;
+  if (error) return <p data-testid="launch-error">Error</p>;
 
   if (!data?.launch) return <p>No data</p>;
 
@@ -46,7 +46,7 @@ export const Launch: React.FC<{ flightNumber?: string }> = ({
   } = data.launch;
 
   return (
-    <div data-testid="data">
+    <div data-testid="launch-data">
       <div>flight_number: {flight_number}</div>
       <div>mission_name: {mission_name}</div>
       <div>launch_year: {launch_year}</div>

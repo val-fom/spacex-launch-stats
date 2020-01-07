@@ -2,28 +2,29 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
 import { render, wait } from '@testing-library/react';
-import { Launch } from 'components/Launch';
+import { Launches } from 'components/Launches';
+import { renderWithRouter } from './testUtils';
 import { mocks } from './mocks';
 
-it('Launch should render loading state initially', () => {
+it('Launches should render loading state initially', () => {
   const { getByTestId } = render(
     <MockedProvider mocks={mocks} addTypename={false}>
-      <Launch flightNumber="1" />
+      <Launches />
     </MockedProvider>
   );
-  const loadingElement = getByTestId('launch-loading');
+  const loadingElement = getByTestId('launches-loading');
   expect(loadingElement).toBeInTheDocument();
 });
 
-it('Launch should render launch details', async () => {
-  const { getByTestId } = render(
+it('Launches should render launches list', async () => {
+  const { getByTestId } = renderWithRouter(
     <MockedProvider mocks={mocks} addTypename={false}>
-      <Launch flightNumber="1" />
+      <Launches />
     </MockedProvider>
   );
 
   await wait();
 
-  const dataElement = getByTestId('launch-data');
+  const dataElement = getByTestId('launches-data');
   expect(dataElement).toBeInTheDocument();
 });

@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import React from 'react';
-import { render } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { LaunchItem } from 'components/LaunchItem';
+import { renderWithRouter } from './testUtils';
 
 const mockLaunch = {
   flight_number: 1,
@@ -17,11 +16,7 @@ const mockLaunch = {
   },
 };
 
-test('matches snapshot', () => {
-  const { asFragment } = render(
-    <Router>
-      <LaunchItem launch={mockLaunch} />
-    </Router>
-  );
+it('matches snapshot', () => {
+  const { asFragment } = renderWithRouter(<LaunchItem launch={mockLaunch} />);
   expect(asFragment()).toMatchSnapshot();
 });

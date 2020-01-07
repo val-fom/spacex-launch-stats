@@ -12,11 +12,11 @@ code {
     monospace;
 }
 
-.CoreLayout {
+.container {
   text-align: center;
 }
 
-.CoreLayout-content {
+.content {
   font-size: 8px;
 }
 
