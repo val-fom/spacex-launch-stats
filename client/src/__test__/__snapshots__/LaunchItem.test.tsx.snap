@@ -9,29 +9,17 @@ exports[`matches snapshot 1`] = `
       href="/launch/1"
     >
       <div>
-        flight_number
-      </div>
-      <div>
-        1
+        flight_number: 1
       </div>
     </a>
     <div>
-      launch_date_local
+      launch_date_local: 2006-03-25T10:30:00+12:00
     </div>
     <div>
-      2006-03-25T10:30:00+12:00
+      mission_name: FalconSat
     </div>
     <div>
-      mission_name
-    </div>
-    <div>
-      FalconSat
-    </div>
-    <div>
-      rocket_name
-    </div>
-    <div>
-      Falcon 1
+      rocket_name: Falcon 1
     </div>
   </div>
 </DocumentFragment>

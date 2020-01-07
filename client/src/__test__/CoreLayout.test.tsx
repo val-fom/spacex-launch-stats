@@ -7,7 +7,7 @@ import { mocks } from './mocks';
 import { renderWithRouter } from './testUtils';
 
 it('CoreLayout rendering with gql data and navigating', async () => {
-  const { getByTestId, getAllByText } = renderWithRouter(
+  const { getByTestId, getByText } = renderWithRouter(
     <MockedProvider mocks={mocks} addTypename={false}>
       <CoreLayout />
     </MockedProvider>
@@ -25,7 +25,7 @@ it('CoreLayout rendering with gql data and navigating', async () => {
   expect(launchesDataElement).toBeInTheDocument();
 
   // click on first LaunchItem
-  const [firstLaunchLink] = getAllByText(/flight_number/i);
+  const firstLaunchLink = getByText(/flight_number: 1/i);
   fireEvent.click(firstLaunchLink);
 
   // check that route changed to launch and it is in loading state
@@ -38,4 +38,7 @@ it('CoreLayout rendering with gql data and navigating', async () => {
   // check that launch are loaded
   const launchDataElement = getByTestId('launch-data');
   expect(launchDataElement).toBeInTheDocument();
+
+  const launchDateElement = getByText(/2006-03-25T10:30:00\+12:00/i);
+  expect(launchDateElement).toBeInTheDocument();
 });
