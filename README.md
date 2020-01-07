@@ -1,4 +1,4 @@
-_Following the course [GraphQL With React & Apollo](https://www.youtube.com/playlist?list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx)_ + TypeScript + tests
+_Following the course [GraphQL With React & Apollo](https://www.youtube.com/playlist?list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx)_ + TypeScript + Testing ([:goat:](https://github.com/testing-library/react-testing-library))
 
 # spacex-launch-stats
 App for learning GraphQL with React and Apollo
