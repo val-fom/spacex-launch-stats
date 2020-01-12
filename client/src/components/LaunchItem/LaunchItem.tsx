@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './LaunchItem.module.css';
+import { Card, Icon } from 'semantic-ui-react';
 
 export const LaunchItem: React.FC<{ launch: Launch }> = ({ launch }) => (
-  <div className={styles.container}>
-    <Link to={`/launch/${launch.flight_number}`}>
-      <div>flight_number: {launch.flight_number}</div>
-    </Link>
-    <div>launch_date_local: {launch.launch_date_local}</div>
-    <div>mission_name: {launch.mission_name}</div>
-    <div>rocket_name: {launch.rocket.rocket_name}</div>
-  </div>
+  <Card centered as={Link} to={`/launch/${launch.flight_number}`}>
+    <Card.Content>
+      <Card.Header>{launch.mission_name}</Card.Header>
+      <Card.Meta>
+        <Icon name="calendar" />
+        {launch.launch_date_local}
+      </Card.Meta>
+      <Card.Description>
+        <Icon name="rocket" />
+        {launch.rocket.rocket_name}
+      </Card.Description>
+    </Card.Content>
+  </Card>
 );
