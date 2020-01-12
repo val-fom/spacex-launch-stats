@@ -48,7 +48,7 @@ export const Launch: React.FC<{ flightNumber?: string }> = ({
   } = data.launch;
 
   return (
-    <Table celled unstackable>
+    <Table celled unstackable data-testid="launch-data">
       <Table.Body>
         <Table.Row>
           <Table.Cell>Flight number</Table.Cell>

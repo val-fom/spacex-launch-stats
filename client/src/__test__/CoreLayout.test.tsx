@@ -14,8 +14,8 @@ it('CoreLayout rendering with gql data and navigating', async () => {
   );
 
   // check launches loading state
-  const launchesLoadingElement = getByTestId('launches-loading');
-  expect(launchesLoadingElement).toBeInTheDocument();
+  const launchesloader = getByTestId('loader');
+  expect(launchesloader).toBeInTheDocument();
 
   // waing for launches data ready
   await wait();
@@ -25,12 +25,12 @@ it('CoreLayout rendering with gql data and navigating', async () => {
   expect(launchesDataElement).toBeInTheDocument();
 
   // click on first LaunchItem
-  const firstLaunchLink = getByText(/flight_number: 1/i);
+  const firstLaunchLink = getByText(/2006-03-25T10:30:00\+12:00/i);
   fireEvent.click(firstLaunchLink);
 
   // check that route changed to launch and it is in loading state
-  const launchLoadingElement = getByTestId('launch-loading');
-  expect(launchLoadingElement).toBeInTheDocument();
+  const launchloader = getByTestId('loader');
+  expect(launchloader).toBeInTheDocument();
 
   // waing for launch data ready
   await wait();

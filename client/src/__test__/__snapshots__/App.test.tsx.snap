@@ -3,11 +3,12 @@
 exports[`App matches snapshot in \`Loading\` state 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="ui container"
   >
     <h1
-      class="ui header"
+      class="ui center aligned header"
       data-testid="header"
+      style="margin-top: 2rem;"
     >
       <a
         href="/"
@@ -16,14 +17,9 @@ exports[`App matches snapshot in \`Loading\` state 1`] = `
       </a>
     </h1>
     <div
-      class="content"
-    >
-      <p
-        data-testid="launches-loading"
-      >
-        Loading...
-      </p>
-    </div>
+      class="ui big active centered inline loader"
+      data-testid="loader"
+    />
   </div>
 </DocumentFragment>
 `;

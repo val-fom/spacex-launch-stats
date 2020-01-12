@@ -12,8 +12,8 @@ it('Launches should render loading state initially', () => {
       <Launches />
     </MockedProvider>
   );
-  const loadingElement = getByTestId('launches-loading');
-  expect(loadingElement).toBeInTheDocument();
+  const loader = getByTestId('loader');
+  expect(loader).toBeInTheDocument();
 });
 
 it('Launches should render launches list', async () => {
