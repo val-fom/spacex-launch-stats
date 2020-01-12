@@ -7,7 +7,9 @@ import styles from './CoreLayout.module.css';
 
 export const CoreLayout: React.FC<{}> = () => (
   <div className={styles.container}>
-    <Header />
+    <div className={styles.header}>
+      <Header />
+    </div>
     <div className={styles.content}>
       <Switch>
         <Route exact path="/" component={LaunchesRoute} />
