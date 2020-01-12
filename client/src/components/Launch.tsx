@@ -4,6 +4,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { Table, Icon } from 'semantic-ui-react';
+import { Loader } from './Loader';
 
 export const GET_LAUNCH = gql`
   query Launch($flight_number: Int!) {
@@ -31,7 +32,7 @@ export const Launch: React.FC<{ flightNumber?: string }> = ({
     },
   });
 
-  if (loading) return <p data-testid="launch-loading">Loading...</p>;
+  if (loading) return <Loader />;
 
   if (error) return <p data-testid="launch-error">Error</p>;
 
