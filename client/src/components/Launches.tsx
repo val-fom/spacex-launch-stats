@@ -2,6 +2,8 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import { Card } from 'semantic-ui-react';
+import { Loader } from 'components/Loader';
 import { LaunchItem } from './LaunchItem';
 
 export const GET_LAUNCHES = gql`
@@ -26,18 +28,21 @@ export const Launches: React.FC<{}> = () => {
     GET_LAUNCHES
   );
 
-  if (loading) return <p data-testid="launches-loading">Loading...</p>;
+  if (loading) return <Loader />;
 
   if (error) return <p>Error</p>;
 
   return (
-    <div data-testid="launches-data">
+    <Card.Group
+      data-testid="launches-data"
+      itemsPerRow={window.innerWidth > 767 ? 2 : 1}
+    >
       {data?.launches.map(launch => (
         <LaunchItem
           key={`${launch.flight_number}${launch.mission_name}`}
           launch={launch}
         />
       ))}
-    </div>
+    </Card.Group>
   );
 };

@@ -3,27 +3,23 @@
 exports[`App matches snapshot in \`Loading\` state 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="ui container"
   >
-    <header
-      class="header"
+    <h1
+      class="ui center aligned header"
       data-testid="header"
+      style="margin-top: 2rem;"
     >
       <a
         href="/"
       >
         SpaceX
       </a>
-    </header>
+    </h1>
     <div
-      class="content"
-    >
-      <p
-        data-testid="launches-loading"
-      >
-        Loading...
-      </p>
-    </div>
+      class="ui big active centered inline loader"
+      data-testid="loader"
+    />
   </div>
 </DocumentFragment>
 `;

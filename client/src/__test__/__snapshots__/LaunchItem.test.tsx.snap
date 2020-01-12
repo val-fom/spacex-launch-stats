@@ -2,25 +2,37 @@
 
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="container"
+  <a
+    class="ui red centered card"
+    href="/launch/1"
   >
-    <a
-      href="/launch/1"
+    <div
+      class="content"
     >
-      <div>
-        flight_number: 1
+      <div
+        class="header"
+      >
+        FalconSat
       </div>
-    </a>
-    <div>
-      launch_date_local: 2006-03-25T10:30:00+12:00
+      <div
+        class="meta"
+      >
+        <i
+          aria-hidden="true"
+          class="calendar icon"
+        />
+        2006-03-25T10:30:00+12:00
+      </div>
+      <div
+        class="description"
+      >
+        <i
+          aria-hidden="true"
+          class="rocket icon"
+        />
+        Falcon 1
+      </div>
     </div>
-    <div>
-      mission_name: FalconSat
-    </div>
-    <div>
-      rocket_name: Falcon 1
-    </div>
-  </div>
+  </a>
 </DocumentFragment>
 `;
